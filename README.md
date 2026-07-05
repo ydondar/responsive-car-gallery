@@ -37,7 +37,7 @@ Optimized for:
 ## Screenshots
 
 ### Desktop View
-![Desktop View](desktop-view.png)
+![Desktop View](desktop-view.jpg)
 
 ### Mobile Responsive View
-![Mobile View](mobile-view.png)
+![Mobile View](mobile-view.jpg)
