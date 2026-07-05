@@ -1,0 +1,562 @@
+/* ================= GENERAL ================= */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-container button {
+  position: relative;
+  bottom: 39px;
+  right: 30px;
+  padding: 7px 17px;
+  background-color: #2f95fc;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+
+.search-container button:hover {
+  background-color: #1e90ff;
+  cursor: pointer;
+}
+
+p:first-of-type {
+  text-indent: 30px;
+}
+
+/* ================= HEADER ================= */
+#header {
+  width: 80%;
+  height: 125px;
+  margin: 10px auto 50px;
+  background: linear-gradient(90deg, #333, #666);
+  border-radius: 10px;
+}
+
+.logo {
+  position: relative;
+  top: 10px;
+  left: 30px;
+}
+
+.cars-page #header {
+  margin-bottom: 20px;
+}
+
+
+.car:target {
+  outline: 3px solid lightseagreen; 
+  background-color: rgb(233, 243, 247); 
+  transition: all 0.6s ease-in-out;
+}
+
+/* ================= NAVBAR ================= */
+#nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 140px;
+  list-style: none;
+}
+
+#nav li {
+  padding: 5px;
+  position: relative;
+  bottom: 35px;
+  right: 30px;
+}
+
+#nav a {
+  font-size: 17px;
+  color: white;
+  border-radius: 5px;
+  padding: 4px 0;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.7s;
+}
+
+/* ================= COMMON LINK EFFECT ================= */
+.common-link {
+  position: relative;
+  display: inline-block;
+}
+
+.common-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #1e90ff;
+  transition: width 0.3s ease;
+}
+
+.common-link:hover::after {
+  width: 100%;
+}
+
+/* ================= SEARCH ================= */
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 5px;
+  transform: translateY(-49px) translateX(25px);
+}
+
+#searchBox {
+  padding: 6px 10px;
+  border: none;
+  width: 12%;
+  max-width: 250px;
+  position: relative;
+  bottom: 40px;
+  right: 30px;
+}
+
+/* ================= TITLES ================= */
+h4 {
+  font-size: 20.5px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= CAR BOXES ================= */
+
+.page-content {
+  flex: 1;
+}
+
+.boxes {
+  width: 85%;
+  margin: 0 auto 70px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+
+.car {
+  width: calc((100% / 3) - 20px);
+  box-sizing: border-box;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 20px;
+  line-height: 1.6;
+}
+
+.car img {
+  display: block;
+  width: 90%;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 auto 5px;
+  transition: 0.7s;
+  box-shadow: 3px 2px 2px black;
+  cursor: pointer;
+}
+
+.car img:hover {
+  transform: translateY(1px) scale(1.04);
+}
+
+.price {
+  font-size: 20px;
+  margin: 20px auto 0;
+  width: fit-content;
+  text-align: center;
+}
+
+/* ================= ABOUT ================= */
+.about-us {
+  width: 78%;
+  margin: 0px auto 50px;
+}
+
+.references {
+  width: 78%;
+  margin: 0px auto 50px;
+}
+
+#main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#main-content p {
+  text-align: justify;
+  margin-bottom: 0px;
+}
+
+/* ================= CONTACT ================= */
+#contact {
+  position: relative;
+  margin: 0px auto;
+  text-align: center;
+  max-width: 300px;
+  padding-bottom: 80px;
+}
+
+label {
+  display: block;
+  margin-top:10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  border: 2px solid #555;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #e0f0ff;
+}
+
+#sendButton {
+  display: block;
+  margin: 30px auto 0;
+  background-color: green;
+  padding: 15px;
+  transition: 0.7s;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+#sendButton.active {
+  animation: colorChange 1s infinite alternate;
+}
+
+#sendButton:hover {
+  background-color: darkgreen;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#message {
+  background-color: rgb(0, 192, 0);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  position: absolute;
+  top: 90%;
+  display: none;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
+
+/* ================= FOOTER ================= */
+#footer {
+  width: 80%;
+  margin: 50px auto 10px;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 20px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #333, #666);
+  color: #fff;
+
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer-bottom {
+  display: contents;
+}
+
+#address {
+  width: auto;
+  margin: 0;
+  text-align: left;
+}
+
+.footer-top #address {
+  display: block;
+  align-self: auto;
+}
+
+#bottom-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+#bottom-logo img {
+  display: block;
+  margin: 0 auto;
+}
+
+#copyright {
+  position: static;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* ================= FOOTER LINKS ================= */
+#bottom-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  max-width: 420px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+}
+
+#bottom-links li {
+  margin: 0;
+  display: inline-block;
+}
+
+#bottom-links a {
+  font-size: 17px;
+  color: white;
+  text-decoration: none;
+  padding: 0 6px;
+  transition: 0.7s;
+  display: inline-block;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* ================= ICONS ================= */
+#icons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+#icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+#icons a:hover {
+  transform: scale(1.25);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  #header {
+    width: 92%;
+    height: auto;
+    min-height: 125px;
+    padding: 15px 20px;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .logo img,
+  #bottom-logo img {
+    max-width: 165px;
+    height: auto;
+  }
+
+  #nav {
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0 0 20px;
+  }
+
+  #nav li {
+    position: static;
+    padding: 5px;
+  }
+
+  .search-container {
+    transform: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #searchBox {
+    position: static;
+    width: 60%;
+    max-width: 350px;
+  }
+
+  .search-container button {
+    position: static;
+  }
+
+  .boxes {
+    width: 92%;
+    gap: 20px;
+  }
+
+  .car {
+    width: calc(50% - 20px);
+  }
+
+  .car img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .about-us,
+  .references {
+    width: 88%;
+  }
+
+  #footer {
+    width: 92%;
+    padding: 25px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-top {
+    width: 100%;
+    align-items: center;
+  }
+
+  #address {
+    text-align: center;
+  }
+
+  .footer-bottom {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  #bottom-logo {
+    position: static;
+    transform: none;
+    order: 1;
+  }
+
+  #bottom-links {
+    order: 2;
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+    max-width: none;
+  }
+
+  #icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  #header {
+    width: 94%;
+    margin-bottom: 30px;
+  }
+
+  #nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #searchBox {
+    width: 100%;
+  }
+
+  .search-container button {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .boxes {
+    width: 94%;
+  }
+
+  .car {
+    width: 100%;
+  }
+
+  .about-us,
+  .references {
+    width: 90%;
+  }
+
+  #main-content p {
+    text-align: left;
+  }
+
+  #contact {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  textarea {
+    max-width: 100%;
+  }
+
+  #footer {
+    width: 94%;
+    margin-top: 30px;
+  }
+
+  #bottom-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
