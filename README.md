@@ -40,4 +40,4 @@ Optimized for:
 ![Desktop View](desktop-view.jpg)
 
 ### Mobile Responsive View
-![Mobile View](mobile-view.jpg)
+![Mobile View](responsive-view.jpg)
